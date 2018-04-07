@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="mesa" size="0.500000 0.148883" />
+    <ImageTarget name="ASTROX" size="0.500000 0.486111" />
+    <ImageTarget name="ASTROXYGEN" size="1.000000 0.780255" />
+    <ImageTarget name="P5" size="0.135000 0.167459" />
+    <ImageTarget name="dsc" size="0.120000 0.112044" />
+  </Tracking>
+</QCARConfig>
