@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    public IItem Active;
-    public List<IItem> items;
+    //public IItem Active;
+    //public List<IItem> items;
+
+    public static Manager instance;
+
+    public Inventory inventory;
+    //public Inventory inventory { get; set; }
 
     //o inventario ficaria aqui
-	void Start ()
+	void Awake ()
     {
-		
+        instance = this;
+        inventory = new Inventory();
 	}
 	
 	void Update ()
@@ -46,9 +52,9 @@ public class Manager : MonoBehaviour
         IInteractive interactive = hit.transform.gameObject.GetComponent<IInteractive>();
         if (interactive != null)
         {
-            if( Active != null )
+            if( inventory.Selected != null )
             {
-                interactive.Interact(Active);
+                interactive.Interact(inventory.Selected);
             }
             else
             {
@@ -56,7 +62,7 @@ public class Manager : MonoBehaviour
             }
         }
     }
-    // esses funções serão usadas para manipulação no inventário 
+    /*// esses funções serão usadas para manipulação no inventário 
     public void EquipItem(IItem toEquip)
     {
         Active = toEquip;
@@ -72,5 +78,5 @@ public class Manager : MonoBehaviour
         {
             items.Add(toAdd);
         }
-    }
+    }*/
 }

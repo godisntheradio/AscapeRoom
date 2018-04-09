@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IInteractive
 {
     void Inspect();
-    void Interact(IItem item);
+    void Interact(Item item);
 }
