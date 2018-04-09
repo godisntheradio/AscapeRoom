@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4710049117299176}
   - component: {fileID: 33872715812245598}
   - component: {fileID: 23114349094074774}
+  - component: {fileID: 65662176224722938}
   m_Layer: 0
   m_Name: SuporteAlavanca
   m_TagString: Untagged
@@ -74,6 +75,7 @@ GameObject:
   - component: {fileID: 23268571944966192}
   - component: {fileID: 95455024192718966}
   - component: {fileID: 114618541494528362}
+  - component: {fileID: 65326885194894192}
   m_Layer: 0
   m_Name: CaixaForca
   m_TagString: Untagged
@@ -281,7 +283,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e9f8c6d9796b9794bbbd742ed4d83544, type: 3}
+  - {fileID: 2100000, guid: 38aec79c177041a4aa6974ada68e91a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -329,6 +331,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1002399842938098}
   m_Mesh: {fileID: 4300002, guid: e9f8c6d9796b9794bbbd742ed4d83544, type: 3}
+--- !u!65 &65326885194894192
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392414885687064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59, y: 1.7503637, z: 1.9999987}
+  m_Center: {x: -0.04, y: -0.00006252683, z: -0.000000002051552}
+--- !u!65 &65662176224722938
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002399842938098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.39062014, z: 0.58}
+  m_Center: {x: -0.0021805004, y: 0.000000015096113, z: 0.00000002261158}
 --- !u!95 &95455024192718966
 Animator:
   serializedVersion: 3

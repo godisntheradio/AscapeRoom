@@ -48,20 +48,29 @@ public class Manager : MonoBehaviour
         {
             if( Active != null )
             {
-                interactive.Inspect();
+                interactive.Interact(Active);
             }
             else
             {
-                interactive.Interact(Active);
+                interactive.Inspect();
             }
         }
     }
-    void EquipItem(IItem toEquip)
+    // esses funções serão usadas para manipulação no inventário 
+    public void EquipItem(IItem toEquip)
     {
         Active = toEquip;
     }
-    void UnequipItem()
+    public void UnequipItem()
     {
         Active = null;
+    }
+    // serve para controlar a entrada de itens no inventário vindos de fora
+    public void GetItem(IItem toAdd)
+    {
+        if (!items.Contains(toAdd))
+        {
+            items.Add(toAdd);
+        }
     }
 }

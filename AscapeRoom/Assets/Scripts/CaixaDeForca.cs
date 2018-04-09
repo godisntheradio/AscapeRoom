@@ -14,7 +14,7 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
 	}
     public void Inspect()
     {
-        throw new System.NotImplementedException();
+        Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), transform);
     }
 
     public void Interact(IItem item)
