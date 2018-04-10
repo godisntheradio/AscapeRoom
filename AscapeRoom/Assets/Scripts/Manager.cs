@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    //public IItem Active;
-    //public List<IItem> items;
-
+ 
     public static Manager instance;
 
     public Inventory inventory;
-    //public Inventory inventory { get; set; }
 
-    //o inventario ficaria aqui
 	void Awake ()
     {
         instance = this;
@@ -62,21 +58,4 @@ public class Manager : MonoBehaviour
             }
         }
     }
-    /*// esses funções serão usadas para manipulação no inventário 
-    public void EquipItem(IItem toEquip)
-    {
-        Active = toEquip;
-    }
-    public void UnequipItem()
-    {
-        Active = null;
-    }
-    // serve para controlar a entrada de itens no inventário vindos de fora
-    public void GetItem(IItem toAdd)
-    {
-        if (!items.Contains(toAdd))
-        {
-            items.Add(toAdd);
-        }
-    }*/
 }

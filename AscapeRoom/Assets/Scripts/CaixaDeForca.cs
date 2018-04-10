@@ -7,12 +7,17 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
     private GameObject key;
     private bool playing = false;
     private Animator animator;
-
+    private bool HasBeenUsed;
     void Start ()
     {
         animator = GetComponent<Animator>();
-        key = GameObject.Find("Key").gameObject;
+        key = GameObject.Find("Key");
+        if (key == null)
+        {
+            Debug.LogError("Couldn't find key");
+        }
         key.SetActive(false);
+        HasBeenUsed = false;
 	}
 	void Update ()
     {
@@ -27,16 +32,29 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
 	}
     public void Inspect()
     {
-        //Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube), transform);
+        if (!HasBeenUsed)
+        {
+            // mensagem para o jogador dizendo que está trancado e precisa de uma chave
+        }
+        else
+        {
+            // mensagem para o jogador que não precisa fazer mais nada com esse objeto
+        }
     }
 
     public void Interact(Item item)
     {
-        if(item.Name == "Key")
+        if(item.Name == "Key" && !HasBeenUsed)
         {
             key.SetActive(true);
-            animator.SetBool("Play", true);
+            animator.SetBool("Abrir", true);
             playing = true;
+            GetComponent<BoxCollider>().enabled = false;
+            HasBeenUsed = true;
         }
+    }
+    public void PuxarAlavanca()
+    {
+        animator.SetBool("PuxarAlavanca", true);
     }
 }

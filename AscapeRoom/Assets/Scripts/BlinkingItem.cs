@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class BlinkingItem : MonoBehaviour
 {
-    public Manager manager;
-    public IItem ItemToGet;
+    public string Name;
+    public Texture Thumbnail;
     bool HasGiven;
 
 
     Vuforia.VirtualButtonBehaviour ButtonComponent;
     void Start ()
     {
+        HasGiven = false;
         ButtonComponent = GetComponent<Vuforia.VirtualButtonBehaviour>();
-        manager = GameObject.Find("GameManager").GetComponent<Manager>();
-        if (manager == null)
+        if (Manager.instance == null)
         {
             Debug.LogError("Nao acha manager para interação");
         }
@@ -26,7 +26,9 @@ public class BlinkingItem : MonoBehaviour
         {
             if (ButtonComponent.Pressed)
             {
-
+                Manager.instance.inventory.AddItem(new Item(Name, Thumbnail));
+                HasGiven = true;
+                Debug.Log("Pegou item"); //debug
             }
         }
 	}

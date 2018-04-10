@@ -7,10 +7,6 @@ public class InventoryUIManager : MonoBehaviour
 {
     //Painel de items na UI
     private GameObject itemPanelUI;
-
-    //Textura para teste
-    public Texture text;
-
     //Cor para highlight do item selecionado na UI
     public Color slotSelectedColour;
 
@@ -39,12 +35,7 @@ public class InventoryUIManager : MonoBehaviour
     void Start()
     {
         itemPanelUI = transform.Find("ItemPanel").gameObject; //Pega painel dos items na UI
-
         manager = GameObject.Find("GameManager").GetComponent<Manager>();
-
-        //print(manager.inventory);
-
-        Manager.instance.inventory.AddItem(new Item("Key", text));
     }
 
     void Update()
