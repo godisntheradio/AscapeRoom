@@ -12,16 +12,20 @@ public class InventoryOpen : MonoBehaviour
 
     public float speed = 100f;
 
-    public float endPoint;
+    float endPoint;
     float startPoint;
 
     Transform openButton;    
 
+	RectTransform rt;
+
 	// Use this for initialization
 	void Start ()
     {
-        startPoint = transform.position.x;
-        openButton = transform.Find("InventoryArrow");
+		rt = GetComponent<RectTransform> ();
+        startPoint = rt.position.x;
+		endPoint = (rt.rect.width * rt.localScale.x) / 2f;
+        openButton = rt.Find("InventoryArrow");
         openButton.GetComponent<Button>().onClick.AddListener(Toggle);
 	}
 
@@ -43,9 +47,19 @@ public class InventoryOpen : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+		if (ScaleUI.Resized) 
+		{
+			startPoint = rt.position.x;
+			endPoint = (rt.rect.width * rt.localScale.x) / 2f;
+			if (state == State.OPENED)
+				state = State.OPENING;
+			else if (state == State.CLOSED)
+				state = State.CLOSING;
+		}
+
         if (state == State.OPENING)
         {
-            Vector3 pos = transform.position;
+            Vector3 pos = rt.position;
             pos.x = Mathf.Lerp(pos.x, endPoint, speed * Time.deltaTime);
 
             Vector3 rot = openButton.eulerAngles;
@@ -58,13 +72,13 @@ public class InventoryOpen : MonoBehaviour
                 state = State.OPENED;
             }
 
-            transform.position = pos;
+            rt.position = pos;
             openButton.eulerAngles = rot;
         }
         else if (state == State.CLOSING)
         {
-            Vector3 pos = transform.position;
-            pos.x = Mathf.Lerp(transform.position.x, startPoint, speed * Time.deltaTime);
+            Vector3 pos = rt.position;
+            pos.x = Mathf.Lerp(rt.position.x, startPoint, speed * Time.deltaTime);
 
             Vector3 rot = openButton.eulerAngles;
             rot.z = Mathf.Lerp(rot.z, 0f, speed * Time.deltaTime);
@@ -76,7 +90,7 @@ public class InventoryOpen : MonoBehaviour
                 state = State.CLOSED;
             }
 
-            transform.position = pos;
+            rt.position = pos;
             openButton.eulerAngles = rot;
         }
 	}
