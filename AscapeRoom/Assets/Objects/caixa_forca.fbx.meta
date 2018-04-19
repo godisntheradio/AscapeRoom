@@ -1,36 +1,43 @@
 fileFormatVersion: 2
-guid: e9f8c6d9796b9794bbbd742ed4d83544
-timeCreated: 1523152332
+guid: 291520f0231e60d4ca1d7d335ce0bb4b
+timeCreated: 1524096920
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Alavanca
     100002: //RootNode
-    100004: Empty
+    100004: Keyhole
     100006: Porta
     100008: SuporteAlavanca
     400000: Alavanca
     400002: //RootNode
-    400004: Empty
+    400004: Keyhole
     400006: Porta
     400008: SuporteAlavanca
-    2100000: unnamed
+    2100000: Caixa
+    2100002: SupportOuter
+    2100004: SupportInner
+    2100006: Handle
+    2100008: Rest
+    2100010: Material
     2300000: Alavanca
     2300002: //RootNode
-    2300004: Porta
-    2300006: SuporteAlavanca
+    2300004: Keyhole
+    2300006: Porta
+    2300008: SuporteAlavanca
     3300000: Alavanca
     3300002: //RootNode
-    3300004: Porta
-    3300006: SuporteAlavanca
+    3300004: Keyhole
+    3300006: Porta
+    3300008: SuporteAlavanca
     4300000: CaixaDeForca
     4300002: SuporteAlavanca
     4300004: Alavanca
     4300006: Porta
-    7400000: Girar
-    7400002: Abrir
-    7400004: PuxarAlavanca
+    4300008: Keyhole
+    7400000: Abrir
+    7400002: PuxarAlavanca
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -60,38 +67,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Girar
-      takeName: Default Take
-      firstFrame: -1
-      lastFrame: 9
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: Abrir
-      takeName: Default Take
-      firstFrame: 9
-      lastFrame: 30
+      takeName: Scene
+      firstFrame: 0
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -117,9 +96,9 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: PuxarAlavanca
-      takeName: Default Take
-      firstFrame: 31
-      lastFrame: 39
+      takeName: Scene
+      firstFrame: 40
+      lastFrame: 110
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -146,7 +125,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

@@ -1,35 +1,17 @@
 fileFormatVersion: 2
-guid: 2508e245b1c8df341af304f5f86e7592
-timeCreated: 1523200358
+guid: 9c4e73a6fd05d6e4cad618db4181ffea
+timeCreated: 1524097557
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Alavanca
-    100002: //RootNode
-    100004: Empty
-    100006: Porta
-    100008: SuporteAlavanca
-    400000: Alavanca
-    400002: //RootNode
-    400004: Empty
-    400006: Porta
-    400008: SuporteAlavanca
-    2100000: unnamed
-    2300000: Alavanca
-    2300002: //RootNode
-    2300004: Porta
-    2300006: SuporteAlavanca
-    3300000: Alavanca
-    3300002: //RootNode
-    3300004: Porta
-    3300006: SuporteAlavanca
-    4300000: CaixaDeForca
-    4300002: SuporteAlavanca
-    4300004: Alavanca
-    4300006: Porta
-    7400000: Default Take
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Plastic
+    2100002: Metal
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -104,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
