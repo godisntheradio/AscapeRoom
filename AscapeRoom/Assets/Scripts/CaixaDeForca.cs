@@ -8,6 +8,9 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
     private bool playing = false;
     private Animator animator;
     private bool HasBeenUsed;
+
+    AudioSource source;
+
     void Start ()
     {
         animator = GetComponent<Animator>();
@@ -18,7 +21,14 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
         }
         key.SetActive(false);
         HasBeenUsed = false;
-	}
+        source = GetComponent<AudioSource>();
+        if (source == null)
+        {
+            Debug.LogError("Couldn't find audioSource");
+        }
+        source.playOnAwake = false;
+        source.loop = false;
+    }
 	void Update ()
     {
 		if (playing)
@@ -47,6 +57,7 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
         if(item.Name == "Key" && !HasBeenUsed)
         {
             key.SetActive(true);
+            source.Play();
             animator.SetBool("Abrir", true);
             playing = true;
             GetComponent<BoxCollider>().enabled = false;
