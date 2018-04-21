@@ -2319,11 +2319,6 @@ Prefab:
       propertyPath: m_Name
       value: caixa_forca
       objectReference: {fileID: 0}
-    - target: {fileID: 82707329000142194, guid: e96701bb601647949b5088c147254f53,
-        type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e96701bb601647949b5088c147254f53, type: 2}
   m_IsPrefabParent: 0
