@@ -8,6 +8,7 @@ public class BlinkingItem : MonoBehaviour
     public Texture Thumbnail;
     bool HasGiven;
 
+    public GameObject emiter;
 
     Vuforia.VirtualButtonBehaviour ButtonComponent;
     void Start ()
@@ -28,7 +29,7 @@ public class BlinkingItem : MonoBehaviour
             {
                 Manager.instance.inventory.AddItem(new Item(Name, Thumbnail));
                 HasGiven = true;
-                Debug.Log("Pegou item"); //debug
+                emiter.SetActive(false);
             }
         }
 	}

@@ -18,7 +18,10 @@ public class Manager : MonoBehaviour
 	void Update ()
     {
         ProcessInput();
-	}
+        // colocar items no inventario para debug
+        GiveKeyItems();
+
+    }
 
     void ProcessInput()
     {
@@ -56,6 +59,14 @@ public class Manager : MonoBehaviour
             {
                 interactive.Inspect();
             }
+        }
+    }
+    void GiveKeyItems()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            inventory.AddItem(new Item("Key"));
+
         }
     }
 }
