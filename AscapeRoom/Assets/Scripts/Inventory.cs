@@ -21,10 +21,10 @@ public class Inventory
     //Seleciona o item no index passado e atualiza UI
     public void Select(int index)
     {
-        if (items[index - 1] != null)
-            selectedIndex = index - 1;
+		if (index == selectedIndex || items[index-1] == null)
+			selectedIndex = -1;
         else
-            selectedIndex = -1;
+            selectedIndex = index - 1;
     }
 
     public void AddItem(Item item)
