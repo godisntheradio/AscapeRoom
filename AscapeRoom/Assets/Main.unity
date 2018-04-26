@@ -144,7 +144,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -184,7 +184,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AstronautMaterial
+  m_Name: DangerMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -197,7 +197,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 77fb44a366db5cb41b8c06649271f8e6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f49df765d884330aa74c74106264d64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -209,7 +209,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: OxygenMaterial
+  m_Name: EtiquetaMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -222,7 +222,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cc6daa766aade3b4cbaeeac788249a2e, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec2b7e9a96ec4ba88af9125d710263f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -752,7 +752,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4315142148522040, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.029999934
+      value: 0.141
       objectReference: {fileID: 0}
     - target: {fileID: 4315142148522040, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
       propertyPath: m_LocalPosition.y
@@ -760,7 +760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4315142148522040, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.377
+      value: -0.018999994
       objectReference: {fileID: 0}
     - target: {fileID: 4315142148522040, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
       propertyPath: m_LocalRotation.x
@@ -792,6 +792,88 @@ Prefab:
       propertyPath: mPrevParent
       value: 
       objectReference: {fileID: 1372837271}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.6799999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.179
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: ShapeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: randomSeed
+      value: -65453649
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: ShapeModule.radius.value
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.99923146
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.039198905
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 175.507
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114506817165672, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.2915934
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: ShapeModule.arc.spread
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: ShapeModule.angle
+      value: 49.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 198574453675679340, guid: 1f339b0776a99524d8ad80e91d239d41,
+        type: 2}
+      propertyPath: ShapeModule.arc.value
+      value: 357.79
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f339b0776a99524d8ad80e91d239d41, type: 2}
   m_IsPrefabParent: 0
@@ -1006,7 +1088,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.3027175}
   m_Shapes:
     vertices: []
     shapes: []
@@ -1059,7 +1141,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: e53594be00000000000000bf000000000000803f000000000000000000000000e53594be000000000000003f000000000000803f00000000000000000000803fe535943e00000000000000bf000000000000803f000000000000803f00000000e535943e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000cafd9abe000000000000803f000000000000000000000000000000bf00000000cafd9a3e000000000000803f00000000000000000000803f0000003f00000000cafd9abe000000000000803f000000000000803f000000000000003f00000000cafd9a3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -1469,15 +1551,15 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Oxygen
+  mTrackableName: Etiqueta
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VuforiaMars_Images.xml
+  mDataSetPath: Vuforia/Sala.xml
   mExtendedTracking: 0
-  mAspectRatio: 1.7272727
+  mAspectRatio: 0.326821
   mImageTargetType: 0
-  mWidth: 0.06985
-  mHeight: 0.12065
+  mWidth: 1
+  mHeight: 0.326821
 --- !u!4 &1372837277
 Transform:
   m_ObjectHideFlags: 0
@@ -1485,8 +1567,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1372837271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.623, y: 0, z: 0}
-  m_LocalScale: {x: 0.12065, y: 0.12065, z: 0.12065}
+  m_LocalPosition: {x: -0.623, y: 0, z: -0.684}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1626735200}
   m_Father: {fileID: 0}
@@ -1586,15 +1668,15 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: Astronaut
+  mTrackableName: Danger
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VuforiaMars_Images.xml
+  mDataSetPath: Vuforia/Sala.xml
   mExtendedTracking: 1
-  mAspectRatio: 1.7272727
+  mAspectRatio: 0.605435
   mImageTargetType: 0
-  mWidth: 0.57894737
-  mHeight: 1
+  mWidth: 2
+  mHeight: 1.21087
 --- !u!4 &1373286093
 Transform:
   m_ObjectHideFlags: 0
@@ -1603,7 +1685,7 @@ Transform:
   m_GameObject: {fileID: 1373286087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.928, y: 0, z: -2.302}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1471292088}
   m_Father: {fileID: 0}
@@ -2091,7 +2173,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.28947368, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.1634105}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2144,7 +2226,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: e53594be00000000000000bf000000000000803f000000000000000000000000e53594be000000000000003f000000000000803f00000000000000000000803fe535943e00000000000000bf000000000000803f000000000000803f00000000e535943e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000155527be000000000000803f000000000000000000000000000000bf000000001555273e000000000000803f00000000000000000000803f0000003f00000000155527be000000000000803f000000000000803f000000000000003f000000001555273e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2289,7 +2371,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4534061212810700, guid: e96701bb601647949b5088c147254f53, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.77
+      value: -0.357
       objectReference: {fileID: 0}
     - target: {fileID: 4534061212810700, guid: e96701bb601647949b5088c147254f53, type: 2}
       propertyPath: m_LocalPosition.z

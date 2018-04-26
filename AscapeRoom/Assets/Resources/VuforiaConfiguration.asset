@@ -44,11 +44,11 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - CD
+    - Sala
     - VuforiaMars_Images
     - VuforiaMars_VuMark
     dataSetsToActivate:
-    - CD
+    - Sala
     - VuforiaMars_Images
     - VuforiaMars_VuMark
   videoBackground:

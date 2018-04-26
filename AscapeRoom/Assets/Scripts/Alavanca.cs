@@ -11,6 +11,7 @@ public class Alavanca : MonoBehaviour, IInteractive
     AudioClip Energy;
     float Volume;
     public float Speed;
+
     void Start ()
     {
         CaixaRef = GetComponentInParent<CaixaDeForca>();
@@ -42,6 +43,7 @@ public class Alavanca : MonoBehaviour, IInteractive
     public void TurnOnEnergySound()
     {
         Source.Play();
+        GetComponent<BoxCollider>().enabled = false; // para evitar que outro clique na regiao da alavanca dispare o som novamente
     }
     public void FadeOut()
     {
