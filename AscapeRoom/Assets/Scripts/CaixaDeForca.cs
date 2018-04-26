@@ -16,6 +16,8 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
     AudioClip Close;
     void Start ()
     {
+		Manager.instance.inventory.AddItem(new Item("Key"));
+		
         AnimatorRef = GetComponent<Animator>();
         Key = GameObject.Find("Key");
         if (Key == null)
@@ -66,6 +68,8 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
             GetComponent<BoxCollider>().enabled = false;
             HasBeenUsed = true;
             source.Play();
+
+			Manager.instance.ShowMessage ("Você abriu a caixa!");
         }
     }
     public void PuxarAlavanca()

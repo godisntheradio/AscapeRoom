@@ -10,20 +10,19 @@ public class InventoryUIManager : MonoBehaviour
     //Cor para highlight do item selecionado na UI
     public Color slotSelectedColour;
 
-    Manager manager;
 
     //Atualiza textura dos slots na UI
     private void UpdateUI()
     {
-        for(int i = 0; i < manager.inventory.Items.Length; ++i)
+        for(int i = 0; i < Manager.instance.inventory.Items.Length; ++i)
         {
-            if (manager.inventory.Items[i] == null)
+            if (Manager.instance.inventory.Items[i] == null)
                 break;
             else
             {
                 var slot = itemPanelUI.transform.Find((i + 1).ToString()).GetComponent<RawImage>();
-                slot.texture = manager.inventory.Items[i].Thumbnail;
-                if (manager.inventory.selectedIndex == i)
+                slot.texture =Manager.instance.inventory.Items[i].Thumbnail;
+                if (Manager.instance.inventory.selectedIndex == i)
                     slot.color = slotSelectedColour;
                 else
                     slot.color = Color.white;
@@ -35,7 +34,6 @@ public class InventoryUIManager : MonoBehaviour
     void Start()
     {
         itemPanelUI = transform.Find("ItemPanel").gameObject; //Pega painel dos items na UI
-        manager = GameObject.Find("GameManager").GetComponent<Manager>();
     }
 
     void Update()

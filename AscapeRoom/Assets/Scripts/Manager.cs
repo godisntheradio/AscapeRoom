@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -9,10 +10,14 @@ public class Manager : MonoBehaviour
 
     public Inventory inventory;
 
+	private TextBox textBox;
+
 	void Awake ()
     {
         instance = this;
         inventory = new Inventory();
+
+		textBox = GameObject.Find ("MessageBox").GetComponent<TextBox> ();
 	}
 	
 	void Update ()
@@ -69,4 +74,15 @@ public class Manager : MonoBehaviour
 
         }
     }
+
+	public void ShowMessage(string message)
+	{
+		textBox.Toggle (true);
+		textBox.SetMessage (message);
+	}
+
+	public void DismissMessage()
+	{
+		textBox.Toggle (false);
+	}
 }

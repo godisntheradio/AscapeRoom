@@ -7,7 +7,7 @@ public class ItemButton : MonoBehaviour
 {
     void OnClick()
     {
-        GameObject.Find("GameManager").GetComponent<Manager>().inventory.Select(int.Parse(transform.parent.name));
+		Manager.instance.inventory.Select(int.Parse(transform.parent.name));
     }
 
 	// Use this for initialization
