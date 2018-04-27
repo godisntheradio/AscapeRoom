@@ -8,7 +8,9 @@ public class Alavanca : MonoBehaviour, IInteractive
 
     AudioSource Source;
     [SerializeField]
-    AudioClip Energy;
+    AudioClip EnergyOn;
+    [SerializeField]
+    AudioClip EnergyOff;
     float Volume;
     public float Speed;
 
@@ -20,7 +22,7 @@ public class Alavanca : MonoBehaviour, IInteractive
         {
             Debug.LogError("Couldn't correctly initialize alavanca");
         }
-        Source.clip = Energy;
+        Source.clip = EnergyOn;
         Source.volume = 1;
         Volume = 0.001f;
 	}
@@ -31,19 +33,25 @@ public class Alavanca : MonoBehaviour, IInteractive
     public void Inspect()
     {
         CaixaRef.PuxarAlavanca();
-        TurnOnEnergySound();
     }
 
     public void Interact(Item item)
     {
         CaixaRef.PuxarAlavanca();
-        TurnOnEnergySound();
-
     }
     public void TurnOnEnergySound()
     {
+        Volume = 0.001f;
+        Source.clip = EnergyOn;
         Source.Play();
-        GetComponent<BoxCollider>().enabled = false; // para evitar que outro clique na regiao da alavanca dispare o som novamente
+        SetColliderActive(false);
+    }
+    public void TurnOffEnergySound()
+    {
+        Volume = 1;
+        Source.clip = EnergyOff;
+        Source.Play();
+        SetColliderActive(false);
     }
     public void FadeOut()
     {
@@ -52,5 +60,9 @@ public class Alavanca : MonoBehaviour, IInteractive
             Volume = Mathf.Lerp(Volume, 1, Time.deltaTime * Speed);
             Source.volume = 1 - Volume;
         }
+    }
+    public void SetColliderActive(bool isActive) // para evitar que clique na regiao da alavanca dispare o som novamente
+    {
+        GetComponent<BoxCollider>().enabled = isActive;
     }
 }

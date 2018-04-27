@@ -9,20 +9,30 @@ public class Manager : MonoBehaviour
     public static Manager instance;
 
     public Inventory inventory;
-
+    [SerializeField]
 	private TextBox textBox;
+
+    //game flags
+    public bool HasEnergy;
+
 
 	void Awake ()
     {
         instance = this;
         inventory = new Inventory();
 
-		textBox = GameObject.Find ("MessageBox").GetComponent<TextBox> ();
+
+        //set flags
+        HasEnergy = false;
+
 	}
 	
 	void Update ()
     {
-        ProcessInput();
+        if (!textBox.GetActive())
+        {
+            ProcessInput();
+        }
         // colocar items no inventario para debug
         GiveKeyItems();
 

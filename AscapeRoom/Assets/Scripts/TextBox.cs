@@ -40,10 +40,15 @@ public class TextBox : MonoBehaviour {
 	public void Toggle(bool show)
 	{
 		gameObject.SetActive (show);
+        
 	}
 
 	public void SetMessage(string message)
 	{
-		GetComponentInChildren<Text> ().text = message;
+		GetComponentInChildren<Text>().text = message;
 	}
+    public bool GetActive()
+    {
+        return gameObject.activeSelf;
+    }
 }
