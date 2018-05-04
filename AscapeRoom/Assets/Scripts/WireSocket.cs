@@ -33,7 +33,14 @@ public class WireSocket : MonoBehaviour, IInteractive
     {
         if(connected != null)
         {
-            GetComponent<LineRenderer>().positionCount = 0;
+            if (socketType == Type.OUT)
+            {
+                GetComponent<LineRenderer>().positionCount = 0;
+            }
+            else
+            {
+                connected.GetComponent<LineRenderer>().positionCount = 0;
+            }
             connected.connected = null;
             connected = null;
         }

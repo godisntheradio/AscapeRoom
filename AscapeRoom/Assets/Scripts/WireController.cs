@@ -26,6 +26,10 @@ public class WireController : MonoBehaviour
             }
             else
             {
+                if (selectedWire != null)
+                {
+                    selectedWire.transform.GetChild(0).gameObject.SetActive(false);
+                }
                 selectedWire = value;
                 selectedWire.GetComponent<WireSocket>().DisconnectWire();
                 value.transform.GetChild(0).gameObject.SetActive(true);
@@ -97,6 +101,8 @@ public class WireController : MonoBehaviour
         wes.connected = wbs;
 
         changed = true;
+        if (AllCorrect())
+            print("ALL!");
     }
 
     public bool AllCorrect()
@@ -126,8 +132,7 @@ public class WireController : MonoBehaviour
     //DEBUG!!
     void Update()
     {
-        if (AllCorrect())
-            print("ALL!");
+        
     }
 
 }
