@@ -14,7 +14,7 @@ public class Manager : MonoBehaviour
 
     //game flags
     public bool HasEnergy;
-
+    public bool IsComOn; //communications
 
 	void Awake ()
     {
@@ -84,13 +84,11 @@ public class Manager : MonoBehaviour
 
         }
     }
-
 	public void ShowMessage(string message)
 	{
 		textBox.Toggle (true);
 		textBox.SetMessage (message);
 	}
-
 	public void DismissMessage()
 	{
 		textBox.Toggle (false);

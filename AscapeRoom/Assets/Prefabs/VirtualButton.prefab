@@ -173,6 +173,8 @@ MonoBehaviour:
   Name: Key
   Thumbnail: {fileID: 2800000, guid: eb01f6fc962cdcc4c94f3e465b308e36, type: 3}
   emiter: {fileID: 1251389924909476}
+  source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 25e1ba394d33e6a439745660986c852e, type: 3}
 --- !u!198 &198574453675679340
 ParticleSystem:
   m_ObjectHideFlags: 1
