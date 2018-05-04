@@ -10,6 +10,9 @@ public class BlinkingItem : MonoBehaviour
 
     public GameObject emiter;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     Vuforia.VirtualButtonBehaviour ButtonComponent;
     void Start ()
     {
@@ -19,6 +22,10 @@ public class BlinkingItem : MonoBehaviour
         {
             Debug.LogError("Nao acha manager para interação");
         }
+        source = gameObject.AddComponent<AudioSource>();
+        source.loop = false;
+        source.playOnAwake = false;
+        source.clip = clip;
     }
 
     void Update ()
