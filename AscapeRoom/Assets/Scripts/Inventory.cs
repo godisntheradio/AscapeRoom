@@ -21,7 +21,7 @@ public class Inventory
     //Seleciona o item no index passado e atualiza UI
     public void Select(int index)
     {
-		if (index == selectedIndex || items[index-1] == null)
+		if (index - 1 == selectedIndex || items[index-1] == null)
 			selectedIndex = -1;
         else
             selectedIndex = index - 1;
@@ -77,13 +77,18 @@ public class Inventory
     }
 
     //Retorna item pelo nome
-    public Item GetItem(string name)
+    public bool ContainItem(string name)
     {
         for (int i = 0; i < items.Length; ++i)
         {
-            if (items[i].Name == name)
-                return items[i];
+            if (items[i] != null)
+            {
+                if (items[i].Name == name)
+                {
+                    return true;    
+                }
+            }
         }
-        return null;
+        return false;
     }
 }

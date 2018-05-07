@@ -35,6 +35,8 @@ public class BlinkingItem : MonoBehaviour
             if (ButtonComponent.Pressed)
             {
                 Manager.instance.inventory.AddItem(new Item(Name, Thumbnail));
+                Manager.instance.ShowMessage("Você pegou o item " + Name);
+                source.Play();
                 HasGiven = true;
                 emiter.SetActive(false);
             }

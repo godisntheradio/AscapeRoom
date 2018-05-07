@@ -8,14 +8,16 @@ public class Computador : MonoBehaviour, IInteractive
 
     public void Inspect()
     {
-        throw new System.NotImplementedException();
+        Manager.instance.ShowMessage("É preciso de uma senha para acessar o computador");
     }
 
     public void Interact(Item item)
     {
-        throw new System.NotImplementedException();
-    }
+        if (item.Name == "Chave" && !Manager.instance.HasEnergy)
+        {
 
+        }
+    }
     void Start ()
     {
 		

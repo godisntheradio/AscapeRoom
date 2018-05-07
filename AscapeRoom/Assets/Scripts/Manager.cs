@@ -80,7 +80,12 @@ public class Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            inventory.AddItem(new Item("Key"));
+            inventory.AddItem(new Item("Chave"));
+
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            inventory.AddItem(new Item("Senha"));
 
         }
     }
@@ -93,4 +98,5 @@ public class Manager : MonoBehaviour
 	{
 		textBox.Toggle (false);
 	}
+
 }

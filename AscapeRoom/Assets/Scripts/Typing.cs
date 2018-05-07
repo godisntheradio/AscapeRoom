@@ -13,7 +13,7 @@ public class Typing : MonoBehaviour
 
 	TextMesh text;
 
-	//public AudioClip sound;
+	public AudioClip sound;
 	AudioSource audioSource;
 
 	// Use this for initialization
@@ -23,19 +23,25 @@ public class Typing : MonoBehaviour
 		message = text.text;
 		text.text = "";
 
-		audioSource = GetComponent<AudioSource> ();
+		audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = sound;
+        audioSource.playOnAwake = false;
+        audioSource.volume = 1.0f;
 
-		StartCoroutine(Type());
 	}
 
-	IEnumerator Type()
+	public IEnumerator Type()
 	{
 		foreach (char letter in message.ToCharArray()) 
 		{
 			text.text += letter;
 			if (audioSource)
-				audioSource.Play ();
+            {
+                audioSource.pitch = Random.Range(0.7f, 1.2f);
+                audioSource.Play ();
+            }
 			yield return new WaitForSeconds (Random.Range (minInterval, maxInterval));
 		}
+        GetComponentInParent<PCLogin>().ChangeToDesktop();
 	}
 }

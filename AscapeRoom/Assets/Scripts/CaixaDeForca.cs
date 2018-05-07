@@ -15,6 +15,8 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
     AudioClip Open;
     [SerializeField]
     AudioClip Close;
+    [SerializeField]
+    AudioClip Locked;
     void Start ()
     {
         //alvanca initialization
@@ -66,26 +68,35 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
 	}
     public void Inspect()
     {
-        if (true)
+        string mensagem;
+        if (Manager.instance.inventory.ContainItem("Chave"))
         {
-            Manager.instance.ShowMessage("Está trancado");
+            mensagem = "Está trancado, mas eu tenho uma chave que talvez abra essa porta.";
         }
         else
         {
-            // mensagem para o jogador que não precisa fazer mais nada com esse objeto
+            mensagem = "Está trancado, é preciso uma chave para abrir.";
         }
+        Manager.instance.ShowMessage(mensagem);
+        Source.clip = Locked;
+        Source.Play();
     }
 
     public void Interact(Item item)
     {
-        if(item.Name == "Key" && !Manager.instance.HasEnergy)
+        if(item.Name == "Chave" )
         {
-            TurnOnEnergy();
+            if (!Manager.instance.HasEnergy)
+            {
+                TurnOnEnergy();
+            }
+            else
+            {
+                TurnOffEnergy();
+            }
+            Source.clip = Open;
         }
-        else if (item.Name == "Key" && Manager.instance.HasEnergy)
-        {
-            TurnOffEnergy();
-        }
+       
         
     }
     public void PuxarAlavanca()

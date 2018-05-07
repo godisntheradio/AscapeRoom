@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="carta4" size="10.000000 18.823530" />
-    <ImageTarget name="carta3" size="10.000000 18.823530" />
-    <ImageTarget name="carta2" size="10.000000 18.823530" />
-    <ImageTarget name="carta1" size="10.000000 18.823530" />
+    <ImageTarget name="carta1_metade" size="3.000000 2.761993" />
+    <ImageTarget name="carta3" size="3.000000 5.647059" />
     <ImageTarget name="monitor" size="3.000000 3.000000" />
     <ImageTarget name="Etiqueta" size="1.000000 0.326821" />
     <ImageTarget name="Danger" size="2.000000 1.210870" />
