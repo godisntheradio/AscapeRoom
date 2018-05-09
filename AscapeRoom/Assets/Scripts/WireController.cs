@@ -39,7 +39,7 @@ public class WireController : MonoBehaviour
 
     void Start()
     {
-        if (wireMaterial != null)
+        /*if (wireMaterial != null)
         {
             foreach (WireSocket ws in WireSocket.activeOutSockets)
             {
@@ -58,7 +58,7 @@ public class WireController : MonoBehaviour
                         break;
                 }
             }
-        }
+        }*/
     }
 
     public void SetChanged()

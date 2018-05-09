@@ -66,6 +66,7 @@ public class WireSocket : MonoBehaviour, IInteractive
             {
                 if (connected != null)
                     DisconnectWire ();
+				
                 wireController.ConnectTo(gameObject);
             }
         }

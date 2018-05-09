@@ -35,26 +35,16 @@ public class Manager : MonoBehaviour
         }
         // colocar items no inventario para debug
         GiveKeyItems();
-
     }
 
     void ProcessInput()
     {
         Ray ray = new Ray();
-        RaycastHit hit;
-        if (Application.platform == RuntimePlatform.Android)
+		RaycastHit hit;
+
+        if (Input.GetMouseButtonDown(0))
         {
-            foreach (Touch touch in Input.touches)
-            {
-                ray = Camera.main.ScreenPointToRay(touch.position);
-            }
-        }
-        else
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            }
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         }
         if (Physics.Raycast(ray, out hit))
         {
@@ -74,7 +64,7 @@ public class Manager : MonoBehaviour
             {
                 interactive.Inspect();
             }
-        }
+		}
     }
     void GiveKeyItems()
     {
