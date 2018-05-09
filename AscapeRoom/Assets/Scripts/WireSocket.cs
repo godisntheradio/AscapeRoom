@@ -54,13 +54,20 @@ public class WireSocket : MonoBehaviour, IInteractive
 
     public void Inspect()
     {
-        if(socketType == Type.OUT)
-            wireController.SelectedWire = gameObject;
+        if (Manager.instance.HasEnergy)
+        {
+            Manager.instance.ShowMessage("É perigoso mexer na fiação com a energia ligada.");
+        }
         else
         {
-            if (connected != null)
-                DisconnectWire ();
-            wireController.ConnectTo(gameObject);
+            if (socketType == Type.OUT)
+                wireController.SelectedWire = gameObject;
+            else
+            {
+                if (connected != null)
+                    DisconnectWire ();
+                wireController.ConnectTo(gameObject);
+            }
         }
     }
 }

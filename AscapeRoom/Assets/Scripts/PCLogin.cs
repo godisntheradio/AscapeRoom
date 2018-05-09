@@ -5,6 +5,8 @@ using UnityEngine;
 public class PCLogin : MonoBehaviour, IInteractive
 {
     Typing passwordRef;
+
+    public GameObject desktopScreenRef;
     public void Inspect()
     {
         Manager.instance.ShowMessage("É preciso uma senha para acessar o computador");
@@ -14,18 +16,7 @@ public class PCLogin : MonoBehaviour, IInteractive
     {
         if (item.Name == "Senha")
         {
-            PCManager a = GetComponentInParent<PCManager>();
-            if (a != null)
-            {
-                Transform b = a.gameObject.GetComponentInChildren<Transform>();
-                if (b != null)
-                {
-                    StartCoroutine(passwordRef.Type());
-                }
-                
-            }
-
-
+            StartCoroutine(passwordRef.Type());
         }
     }
 
@@ -35,6 +26,6 @@ public class PCLogin : MonoBehaviour, IInteractive
 	}
     public void ChangeToDesktop()
     {
-        GetComponentInParent<PCManager>().ChangeScreen(transform.parent.GetComponentInChildren<Transform>().gameObject, gameObject);
+        GetComponentInParent<PCManager>().ChangeScreen(desktopScreenRef, gameObject);
     }
 }
