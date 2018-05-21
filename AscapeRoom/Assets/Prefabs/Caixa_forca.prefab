@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnergyOn: {fileID: 8300000, guid: 4c55ec2629fdf33409183d987da023ba, type: 3}
-  EnergyOff: {fileID: 8300000, guid: 25e1ba394d33e6a439745660986c852e, type: 3}
+  EnergyOff: {fileID: 8300000, guid: 405ad7389c4b3334eb86d73f109309ec, type: 3}
   Speed: 0.5
 --- !u!114 &114657957779221760
 MonoBehaviour:

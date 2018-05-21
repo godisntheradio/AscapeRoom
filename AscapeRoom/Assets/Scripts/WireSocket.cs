@@ -46,7 +46,6 @@ public class WireSocket : MonoBehaviour, IInteractive
         }
     }
 
-	// Update is called once per frame
 	public void Interact (Item item)
     {
         Inspect();

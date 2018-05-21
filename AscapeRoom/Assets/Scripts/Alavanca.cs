@@ -48,7 +48,7 @@ public class Alavanca : MonoBehaviour, IInteractive
     }
     public void TurnOffEnergySound()
     {
-        Volume = 1;
+        Volume = 0.001f;
         Source.clip = EnergyOff;
         Source.Play();
         SetColliderActive(false);

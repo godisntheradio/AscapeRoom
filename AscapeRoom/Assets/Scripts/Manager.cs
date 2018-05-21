@@ -12,10 +12,11 @@ public class Manager : MonoBehaviour
     [SerializeField]
 	private TextBox textBox;
 
+
     //game flags
     public bool HasEnergy;
     public bool IsComOn; //communications
-
+    public bool IsGameOver;
 	void Awake ()
     {
         instance = this;
@@ -24,7 +25,8 @@ public class Manager : MonoBehaviour
 
         //set flags
         HasEnergy = false;
-
+        IsComOn = false;
+        IsGameOver = false;
 	}
 	
 	void Update ()
@@ -86,7 +88,10 @@ public class Manager : MonoBehaviour
 	}
 	public void DismissMessage()
 	{
-		textBox.Toggle (false);
+        if (!IsGameOver)
+        {
+		    textBox.Toggle (false);
+        }
 	}
 
 }

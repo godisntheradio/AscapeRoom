@@ -86,6 +86,7 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
     {
         if(item.Name == "Chave" )
         {
+            Source.clip = Open;
             if (!Manager.instance.HasEnergy)
             {
                 TurnOnEnergy();
@@ -94,7 +95,6 @@ public class CaixaDeForca : MonoBehaviour, IInteractive
             {
                 TurnOffEnergy();
             }
-            Source.clip = Open;
         }
        
         

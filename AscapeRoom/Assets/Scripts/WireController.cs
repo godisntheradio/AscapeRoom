@@ -13,6 +13,9 @@ public class WireController : MonoBehaviour
 
     public Material wireMaterial;
 
+    public AudioSource source;
+    public AudioClip correctSound;
+
     private GameObject selectedWire;
     public GameObject SelectedWire
     {
@@ -39,26 +42,10 @@ public class WireController : MonoBehaviour
 
     void Start()
     {
-        /*if (wireMaterial != null)
-        {
-            foreach (WireSocket ws in WireSocket.activeOutSockets)
-            {
-                LineRenderer lr = ws.GetComponent<LineRenderer>();
-                lr.material = new Material(wireMaterial);
-                switch(ws.socketColour)
-                {
-                    case WireSocket.Colour.RED:
-                        lr.material.color = Color.red;
-                        break;
-                    case WireSocket.Colour.GREEN:
-                        lr.material.color = Color.green;
-                        break;
-                    case WireSocket.Colour.BLUE:
-                        lr.material.color = Color.blue;
-                        break;
-                }
-            }
-        }*/
+        source = gameObject.AddComponent<AudioSource>();
+        source.clip = correctSound;
+        source.playOnAwake = false;
+        source.loop = false;
     }
 
     public void SetChanged()
@@ -102,7 +89,14 @@ public class WireController : MonoBehaviour
 
         changed = true;
         if (AllCorrect())
-            print("ALL!");
+        {
+            Manager.instance.IsComOn = true;
+            source.Play();
+        }
+        else
+        {
+            Manager.instance.IsComOn = false;
+        }
     }
 
     public bool AllCorrect()
@@ -128,11 +122,4 @@ public class WireController : MonoBehaviour
             return correctLast;
         }
     }
-
-    //DEBUG!!
-    void Update()
-    {
-        
-    }
-
 }

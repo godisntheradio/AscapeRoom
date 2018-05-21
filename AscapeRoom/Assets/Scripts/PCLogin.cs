@@ -18,6 +18,10 @@ public class PCLogin : MonoBehaviour, IInteractive
         {
             StartCoroutine(passwordRef.Type());
         }
+        else
+        {
+            Inspect();
+        }
     }
 
     void Start ()
@@ -27,5 +31,6 @@ public class PCLogin : MonoBehaviour, IInteractive
     public void ChangeToDesktop()
     {
         GetComponentInParent<PCManager>().ChangeScreen(desktopScreenRef, gameObject);
+        desktopScreenRef.GetComponent<PCDesktop>().SetPuzzle(false);
     }
 }
