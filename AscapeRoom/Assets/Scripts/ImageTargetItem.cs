@@ -21,13 +21,17 @@ public class ImageTargetItem : MonoBehaviour
     public AudioSource source;
     public AudioClip clip;
 
-    Vuforia.TrackableBehaviour otherTargetBehaviour;
+    public Vuforia.TrackableBehaviour otherTargetBehaviour;
 
     public GameObject Result;
     void Start ()
     {
         targetBehaviour = GetComponent<Vuforia.TrackableBehaviour>();
-        otherTargetBehaviour = GetComponent<Vuforia.TrackableBehaviour>();
+        //otherTargetBehaviour = GetComponent<Vuforia.TrackableBehaviour>();
+        if (otherTargetBehaviour != null)
+        {
+            print("achou");
+        }
         source = gameObject.AddComponent<AudioSource>();
         source.playOnAwake = false;
         source.loop = false;

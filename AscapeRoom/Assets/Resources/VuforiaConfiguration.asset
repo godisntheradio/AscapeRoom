@@ -45,10 +45,8 @@ MonoBehaviour:
   databaseLoad:
     dataSetsToLoad:
     - Sala
-    - VuforiaMars_Images
     dataSetsToActivate:
     - Sala
-    - VuforiaMars_Images
   videoBackground:
     clippingMode: 0
     numDivisions: 2

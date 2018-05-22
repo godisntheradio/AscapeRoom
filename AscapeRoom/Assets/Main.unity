@@ -119,7 +119,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: carta1_metadeMaterial
+  m_Name: combinadoMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -132,7 +132,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a2f639284fcf44eeb22965fdc680cb39, type: 3}
+        m_Texture: {fileID: 2800000, guid: 00ae4d37c27646309f3e59e517f43882, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -612,7 +612,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c4625edc602846ab8afd364143987ba6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 084a179fd681442690c635a72c956c3a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -971,7 +971,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 7659ed6e279db68419746a9fa7466c30, type: 2}
     - target: {fileID: 100002, guid: 3a3826b6f4046ff41bd174225475ab7c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a3826b6f4046ff41bd174225475ab7c, type: 3}
@@ -1989,7 +1989,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.46033216}
+      m_Extent: {x: 0.49635035, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2042,7 +2042,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf00000000a8b0ebbe000000000000803f000000000000000000000000000000bf00000000a8b0eb3e000000000000803f00000000000000000000803f0000003f00000000a8b0ebbe000000000000803f000000000000803f000000000000003f00000000a8b0eb3e000000000000803f000000000000803f0000803f
+    _typelessdata: a221febe00000000000000bf000000000000803f000000000000000000000000a221febe000000000000003f000000000000803f00000000000000000000803fa221fe3e00000000000000bf000000000000803f000000000000803f00000000a221fe3e000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2645,15 +2645,15 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: carta1_metade
+  mTrackableName: combinado
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/Sala.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.9206643
+  mAspectRatio: 1.007353
   mImageTargetType: 0
   mWidth: 3
-  mHeight: 2.761993
+  mHeight: 3.022059
 --- !u!4 &1419949288
 Transform:
   m_ObjectHideFlags: 0
@@ -2662,7 +2662,7 @@ Transform:
   m_GameObject: {fileID: 1419949282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.69, y: -2.3419569, z: -25.267586}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 3.022059, y: 3.022059, z: 3.022059}
   m_Children:
   - {fileID: 773516277}
   m_Father: {fileID: 0}
@@ -2684,6 +2684,7 @@ MonoBehaviour:
   type: 1
   source: {fileID: 0}
   clip: {fileID: 8300000, guid: 25e1ba394d33e6a439745660986c852e, type: 3}
+  otherTargetBehaviour: {fileID: 519001030}
   Result: {fileID: 1408713673}
 --- !u!1 &1426779871
 GameObject:
@@ -3152,7 +3153,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6c098855708c4fec8a095dc2a50655b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: bd6840504c5349118e14aa108fe7b5cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -3739,7 +3740,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9f258fdc669b4195b5f29abe46fa0fcc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9692c9a866784af5bc3f82b763192956, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4059,7 +4060,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9fabbb900af9424eb5852b52c5597714, type: 3}
+        m_Texture: {fileID: 2800000, guid: ef9b404a585a427687c34d766c452049, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4084,7 +4085,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6047a9f6b35946ae884fdda112dcca54, type: 3}
+        m_Texture: {fileID: 2800000, guid: d0ef38ad8a5049108cb98d4036a4f672, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
