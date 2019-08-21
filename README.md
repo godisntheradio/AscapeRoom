@@ -1,2 +1,2 @@
 # AscapeRoom
-asdasda
+Projeto de realidade aumentada para o curso de Jogos Digitais
